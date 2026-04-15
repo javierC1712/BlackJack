@@ -3,46 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackJack | Apuesta con Estilo</title>
+    <title>BlackJack — Plataforma de Apuestas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav class="navbar">
-    <div class="logo">Black<span>Jack</span></div>
+    <div class="logo">BLACK<span>JACK</span></div>
     <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Mercados</a></li>
-        <li><a href="#">Juego Responsable</a></li>
-        <li class="btn-primary">Registrarse</li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><button class="btn-demo" onclick="openModal('demo')">MODO DEMO</button></li>
     </ul>
 </nav>
 
-<header class="hero">
+<section id="inicio" class="hero">
     <div class="hero-content">
-        <h1>Te dejaron en ruina emocional...</h1>
-        <h2 class="neon-text">evita la financiera.</h2>
-        <p>La plataforma de apuestas más rápida de Chile, auditada por la SCJ.</p>
-        <button class="cta-button">¡APUESTA AHORA!</button>
-    </div>
-</header>
-
-<section class="modules">
-    <div class="card">
-        <h3>Billetera</h3>
-        <p>Gestión de fondos vía WebPay con liquidación en milisegundos.</p>
-    </div>
-    <div class="card">
-        <h3>Apuestas</h3>
-        <p>Mercados en tiempo real con baja latencia gracias a Kafka.</p>
-    </div>
-    <div class="card">
-        <h3>Seguridad</h3>
-        <p>Verificación KYC y cumplimiento estricto de la Ley N° 21.562.</p>
+        <span class="badge">V.1 FULLSTACK III</span>
+        <h1>TE DEJARON EN RUINA EMOCIONAL... <br><span class="highlight">EVITA LA FINANCIERA.</span></h1>
+        <p>La plataforma de apuestas más rápida de Chile, auditada por la SCJ y basada en microservicios.</p>
+        <div class="cta-group">
+            <button class="btn-primary" onclick="openModal('registro')">EMPEZAR A GANAR</button>
+        </div>
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2026 BlackJack V.1 - Javier Candia & Adrian Diaz</p>
-</footer>
+<section id="nosotros" class="info-section">
+    <div class="container">
+        <h2 class="section-title">Sobre el Proyecto</h2>
+        <div class="grid-about">
+            <div class="glass-card">
+                <h3 class="purple-text">Misión</h3>
+                <p>Ofrecer una plataforma segura, transparente y de vanguardia, cumpliendo estrictamente con la Ley N° 21.562 para garantizar la confianza de nuestros usuarios.</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="pink-text">Visión</h3>
+                <p>Ser el referente tecnológico en Chile para sistemas de juegos de azar, destacando por nuestra baja latencia y procesamiento distribuido.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="info-section">
+    <div class="container">
+        <h2 class="section-title">Contacto Soporte</h2>
+        <div class="glass-card contact-box">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">ENVIAR CONSULTA</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
