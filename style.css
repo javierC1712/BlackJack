@@ -1,0 +1,101 @@
+/* Paleta de Colores: Negro, Morado, Rosado */
+:root {
+    --bg-dark: #0f0f0f;
+    --primary-purple: #7b2cb7;
+    --accent-pink: #ff006e;
+    --text-white: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid var(--primary-purple);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span { color: var(--accent-pink); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li { margin-left: 25px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent-pink); }
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #240046 0%, #0f0f0f 100%);
+}
+
+.neon-text {
+    color: var(--accent-pink);
+    text-shadow: 0 0 10px var(--accent-pink);
+    font-size: 3rem;
+}
+
+.cta-button {
+    background-color: var(--primary-purple);
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--primary-purple);
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-pink);
+    transform: scale(1.05);
+}
+
+/* Cards Section */
+.modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 4px solid var(--primary-purple);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-top: 4px solid var(--accent-pink);
+    transform: translateY(-10px);
+}
