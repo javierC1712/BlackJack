@@ -221,4 +221,21 @@ footer { position: relative; z-index: 1; background: var(--surface); border-top:
 /* ── RESPONSIVE ────────────────────────────── */
 @media (max-width: 1000px) { .hero { grid-template-columns: 1fr; gap: 2.5rem; } .hero-right { display: none; } .stats-band { grid-template-columns: repeat(2, 1fr); } .features-intro { grid-template-columns: 1fr; } .why-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } nav { padding: 0 1.25rem; } .nav-links { display: none; } }
-@media (m
+@media (max-width: 640px) { .hero { padding: 3rem 1.25rem 2rem; } .stats-band { grid-template-columns: 1fr 1fr; padding: 2.5rem 1.25rem; } .why-grid { grid-template-columns: 1fr; } .cta-banner { padding: 2.5rem 1.5rem; } .features-section, .why-section, .cta-section { padding-left: 1.25rem; padding-right: 1.25rem; } }
+
+
+/* ── CONTACT SECTION ────────────────────── */
+.contact-section { padding: 5rem 2.5rem; max-width: 1200px; margin: 0 auto; min-height: 80vh; }
+.contact-header { text-align: center; margin-bottom: 3.5rem; }
+.contact-header .section-subtitle { margin: 0 auto; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; }
+.info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 1.5rem; }
+.info-icon { background: rgba(124, 58, 237, 0.1); border: 1px solid var(--border); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 1.3rem; flex-shrink: 0; }
+.info-item strong { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 4px; }
+.info-item p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+@media (max-width: 850px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+}

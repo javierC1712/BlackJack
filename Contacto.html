@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — BlackJack</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow-1"></div>
+
+<nav>
+    <a href="index.html" class="logo">
+        <span class="logo-icon">♠</span>
+        Black<span>Jack</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <button class="btn-login" onclick="showModal('login')">Iniciar sesión</button>
+        <button class="btn-register" onclick="showModal('register')">Registrarse gratis</button>
+    </div>
+</nav>
+
+<main>
+    <section class="contact-section reveal">
+        <div class="contact-header">
+            <div class="section-label">Soporte Técnico 24/7</div>
+            <h1 class="section-title">¿NECESITAS <span class="accent">AYUDA?</span></h1>
+            <p class="section-subtitle">Nuestro equipo de soporte está disponible en todo momento. Para consultas sobre verificación KYC, depósitos vía WebPay o revisión de apuestas, escríbenos.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info card">
+                <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--purple-light); margin-bottom: 1.5rem;">INFORMACIÓN DE CONTACTO</h3>
+
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <div>
+                        <strong>Email de Soporte</strong>
+                        <p>soporte@blackjack.cl</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <strong>Línea Gratuita</strong>
+                        <p>+56 800 123 456</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">🏢</span>
+                    <div>
+                        <strong>Oficina Central (Proyecto)</strong>
+                        <p>Av. Vicuña Mackenna 4917, San Joaquín<br>DuocUC Sede San Joaquín</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <div class="badge badge-pink" style="margin-bottom: 1rem;">
+                        <span class="badge-dot"></span> Regulación SCJ
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                        Toda consulta relacionada con la Ley N° 21.562 y auditorías de transacciones será derivada a nuestro equipo de cumplimiento normativo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper card">
+                <form id="contactForm" class="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Nuestro equipo lo revisará pronto.'); this.reset();">
+                    <div class="form-row">
+                        <div class="modal-field">
+                            <label class="modal-label">Nombre Completo</label>
+                            <input class="modal-input" type="text" placeholder="Ej: Javier Candia" required>
+                        </div>
+                        <div class="modal-field">
+                            <label class="modal-label">RUT (Opcional)</label>
+                            <input class="modal-input" type="text" placeholder="12.345.678-9">
+                        </div>
+                    </div>
+
+                    <div class="modal-field">
+                        <label class="modal-label">Correo Electrónico</label>
+                        <input class="modal-input" type="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="modal-field">
+                        <label class="modal-label">Asunto</label>
+                        <select class="modal-input" required style="appearance: auto; background-color: var(--surface2); color: var(--text);">
+                            <option value="" disabled selected>Selecciona el motivo de tu consulta</option>
+                            <option value="deposito">Problemas con depósito/retiro (WebPay)</option>
+                            <option value="apuesta">Revisión de apuesta o cuota</option>
+                            <option value="kyc">Verificación de identidad (KYC)</option>
+                            <option value="limites">Configuración de Juego Responsable</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-field">
+                        <label class="modal-label">Mensaje</label>
+                        <textarea class="modal-input" rows="5" placeholder="Describe detalladamente tu problema o consulta..." required style="resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                        Enviar Mensaje 🚀
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="logo" style="font-size:1.7rem;">
+                <span class="logo-icon">♠</span>
+                Black<span>Jack</span>
+            </a>
+            <p>Proyecto académico V.1 — Desarrollado con Spring Boot, Kafka y React. Arquitectura de microservicios auditada para alto rendimiento.</p>
+            <div style="margin-top:1.25rem;display:flex;gap:8px;flex-wrap:wrap;">
+                <div class="age-badge">🔞 +18</div>
+                <div class="age-badge" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.25);color:var(--purple-light);">SCJ Ley N° 21.562</div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Plataforma</h4>
+            <ul>
+                <li><a href="nosotros.html">Misión y Visión</a></li>
+                <li><a href="#">Módulos del Sistema</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Equipo Fullstack III</h4>
+            <ul>
+                <li><a href="#">Javier Candia</a></li>
+                <li><a href="#">Adrian Diaz</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="footer-legal">© 2026 BlackJack V.1 · DuocUC Santiago · Todos los derechos reservados</p>
+        <p class="footer-legal" style="color:var(--text-faint);max-width:400px;text-align:right;font-size:0.72rem;">
+            El juego puede causar dependencia. Modere sus apuestas.
+
+        </p>
+    </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" id="modal-content"></div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
