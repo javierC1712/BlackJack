@@ -4,75 +4,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackJack — Plataforma de Apuestas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">BLACK<span>JACK</span></div>
+<div class="bg-grid"></div>
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
+
+<nav>
+    <a href="index.html" class="logo">
+        <span class="logo-icon">♠</span>
+        Black<span>Jack</span>
+    </a>
+
     <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><button class="btn-demo" onclick="openModal('demo')">MODO DEMO</button></li>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
     </ul>
+
+    <div class="nav-right">
+        <button class="btn-login" onclick="showModal('login')">Iniciar sesión</button>
+        <button class="btn-register" onclick="showModal('register')">Registrarse gratis</button>
+    </div>
 </nav>
 
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <span class="badge">V.1 FULLSTACK III</span>
-        <h1>TE DEJARON EN RUINA EMOCIONAL... <br><span class="highlight">EVITA LA FINANCIERA.</span></h1>
-        <p>La plataforma de apuestas más rápida de Chile, auditada por la SCJ y basada en microservicios.</p>
-        <div class="cta-group">
-            <button class="btn-primary" onclick="openModal('registro')">EMPEZAR A GANAR</button>
-        </div>
-    </div>
-</section>
+<main>
 
-<section id="nosotros" class="info-section">
-    <div class="container">
-        <h2 class="section-title">Sobre el Proyecto</h2>
-        <div class="grid-about">
-            <div class="glass-card">
-                <h3 class="purple-text">Misión</h3>
-                <p>Ofrecer una plataforma segura, transparente y de vanguardia, cumpliendo estrictamente con la Ley N° 21.562 para garantizar la confianza de nuestros usuarios.</p>
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Plataforma auditada SCJ
+                </div>
+                <div class="badge badge-pink">
+                    <span class="badge-dot"></span>
+                    Arquitectura Microservicios
+                </div>
             </div>
-            <div class="glass-card">
-                <h3 class="pink-text">Visión</h3>
-                <p>Ser el referente tecnológico en Chile para sistemas de juegos de azar, destacando por nuestra baja latencia y procesamiento distribuido.</p>
+
+            <h1>
+                <span class="line-white">TE DEJARON EN</span>
+                <span class="line-accent">RUINA EMOCIONAL...</span>
+                <span class="line-pink">EVITA LA FINANCIERA.</span>
+            </h1>
+
+            <p class="hero-desc">
+                Plataforma de gestión integral de apuestas en línea que centraliza y automatiza los procesos de administración de usuarios, transacciones financieras y operaciones de juego, garantizando disponibilidad y seguridad.
+            </p>
+
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="showModal('register')">
+                    🎁 ¡Apuesta ahora!
+                </button>
+                <button class="btn-secondary" onclick="showModal('demo')">
+                    ▶ Modo Demo
+                </button>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span>🔒</span>
+                    <span>Autenticación JWT</span>
+                </div>
+                <div class="trust-item">
+                    <span>⚡</span>
+                    <span>Apache Kafka</span>
+                </div>
+                <div class="trust-item">
+                    <span>🏛️</span>
+                    <span>Ley N° 21.562</span>
+                </div>
+                <div class="trust-item">
+                    <span>💳</span>
+                    <span>WebPay Plus</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
 
-<section id="contacto" class="info-section">
-    <div class="container">
-        <h2 class="section-title">Contacto Soporte</h2>
-        <div class="glass-card contact-box">
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Nombre completo" required>
+        <div class="hero-right">
+            <div class="platform-preview">
+                <div class="float-badge fb-top-left">
+                    <div class="fb-dot fb-dot-green"></div>
+                    <div class="fb-text">
+                        <strong>Latencia Cero</strong>
+                        <span>Liquidación en ms</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Correo electrónico" required>
+
+                <div class="preview-shell">
+                    <div class="preview-topbar">
+                        <div class="preview-dot pd-red"></div>
+                        <div class="preview-dot pd-yellow"></div>
+                        <div class="preview-dot pd-green"></div>
+                        <div class="preview-url">blackjack.cl</div>
+                    </div>
+
+                    <div class="preview-hero-area">
+                        <div class="preview-logo-big">♠ Black<span>Jack</span></div>
+                        <div class="preview-tagline">El referente de juegos de azar · Chile</div>
+                        <div class="preview-cards-row">
+                            <div class="mini-card mc-white">♠</div>
+                            <div class="mini-card mc-dark">A</div>
+                            <div class="mini-card mc-pink">♥</div>
+                        </div>
+                        <button class="preview-cta-btn">🎁 Reclamar bono de bienvenida</button>
+                    </div>
+
+                    <div class="preview-stats-row">
+                        <div class="preview-stat">
+                            <div class="preview-stat-val pv-purple">9</div>
+                            <div class="preview-stat-lbl">Módulos</div>
+                        </div>
+                        <div class="preview-stat">
+                            <div class="preview-stat-val pv-pink">100%</div>
+                            <div class="preview-stat-lbl">Uptime</div>
+                        </div>
+                        <div class="preview-stat">
+                            <div class="preview-stat-val">24/7</div>
+                            <div class="preview-stat-lbl">Soporte</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <textarea placeholder="¿En qué podemos ayudarte?"></textarea>
+
+                <div class="float-badge fb-bottom-right">
+                    <div class="fb-dot fb-dot-pink"></div>
+                    <div class="fb-text">
+                        <strong>100% Seguro</strong>
+                        <span>Verificación KYC</span>
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary full-width">ENVIAR CONSULTA</button>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-band">
+        <div class="stat-card reveal">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value"><span data-count="500" data-suffix="+">0</span></div>
+            <div class="stat-label">Usuarios Concurrentes Mínimos</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-1">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-value"><span data-count="15" data-suffix="ms">0</span></div>
+            <div class="stat-label">Latencia Promedio</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-icon">🐳</div>
+            <div class="stat-value"><span data-count="9" data-suffix="">0</span></div>
+            <div class="stat-label">Contenedores Docker</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-icon">🏛️</div>
+            <div class="stat-value"><span data-count="100" data-suffix="%">0</span></div>
+            <div class="stat-label">Cumplimiento SCJ</div>
         </div>
     </div>
-</section>
 
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modal-body"></div>
+    <section class="features-section">
+        <div class="reveal" style="text-align:center;">
+            <div class="section-label" style="justify-content:center;display:flex;">Nuestra Tecnología</div>
+            <h2 class="section-title" style="text-align:center;">UNA PLATAFORMA <span class="accent">ROBUSTA</span><br>Y <span class="accent2">ESCALABLE</span></h2>
+            <p class="section-subtitle" style="margin:0 auto;text-align:center;">Diseñada desde cero con las mejores prácticas de la industria del software para soportar transacciones financieras de alta disponibilidad.</p>
+        </div>
+
+        <div class="features-intro">
+            <div class="features-visual reveal">
+                <div class="feature-screen">
+                    <div class="fscreen-header">
+                        <span class="fscreen-title">Estado de Microservicios</span>
+                        <span class="fscreen-live">
+                <span style="width:7px;height:7px;background:#4ade80;border-radius:50%;display:inline-block;animation:pulse-dot 1.5s infinite;"></span>
+                Sistema Operativo
+              </span>
+                    </div>
+                    <div class="fscreen-body">
+                        <div class="fscreen-game-row">
+                            <div class="fgr-icon">👥</div>
+                            <div class="fgr-info">
+                                <div class="fgr-name">Gestión de Usuarios</div>
+                                <div class="fgr-sub">Autenticación, KYC y Roles (Spring Boot)</div>
+                            </div>
+                            <span class="fgr-badge fgb-green">Activo</span>
+                        </div>
+                        <div class="fscreen-game-row">
+                            <div class="fgr-icon" style="background:linear-gradient(135deg,rgba(232,121,160,0.2),rgba(232,121,160,0.05));border-color:rgba(232,121,160,0.2);">💳</div>
+                            <div class="fgr-info">
+                                <div class="fgr-name">Billetera y Fondos</div>
+                                <div class="fgr-sub">Integración WebPay y Transacciones PostgreSQL</div>
+                            </div>
+                            <span class="fgr-badge fgb-green">Activo</span>
+                        </div>
+                        <div class="fscreen-game-row">
+                            <div class="fgr-icon" style="background:linear-gradient(135deg,rgba(212,168,67,0.2),rgba(212,168,67,0.05));border-color:rgba(212,168,67,0.2);">⚡</div>
+                            <div class="fgr-info">
+                                <div class="fgr-name">Gestión de Apuestas</div>
+                                <div class="fgr-sub">Procesamiento de eventos en tiempo real</div>
+                            </div>
+                            <span class="fgr-badge fgb-purple">Kafka Sync</span>
+                        </div>
+                        <div class="fscreen-game-row">
+                            <div class="fgr-icon" style="background:linear-gradient(135deg,rgba(232,121,160,0.15),rgba(124,58,237,0.1));border-color:rgba(124,58,237,0.2);">⚖️</div>
+                            <div class="fgr-info">
+                                <div class="fgr-name">Juego Responsable</div>
+                                <div class="fgr-sub">Control de límites diarios y mensuales (SCJ)</div>
+                            </div>
+                            <span class="fgr-badge fgb-pink">Auditado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-list reveal reveal-delay-1">
+                <div class="feature-item">
+                    <div class="feature-num">01</div>
+                    <div class="feature-text">
+                        <h3>MICROSERVICIOS INDEPENDIENTES</h3>
+                        <p>Desarrollado en Java 21 y Spring Boot 3. Cada uno de los 9 módulos escala de forma independiente mediante contenedores Docker aislando fallos y asegurando rendimiento.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">02</div>
+                    <div class="feature-text">
+                        <h3>MENSAJERÍA ASÍNCRONA</h3>
+                        <p>Utilizamos Apache Kafka para la comunicación entre servicios. Esto permite liquidaciones de apuestas inmediatas sin generar cuellos de botella en la base de datos PostgreSQL.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">03</div>
+                    <div class="feature-text">
+                        <h3>LICENCIA Y NORMATIVA SCJ</h3>
+                        <p>Diseñados desde cero para cumplir la Ley N° 21.562. Incluye módulos estrictos de Juego Responsable y trazabilidad de operaciones para auditorías.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">04</div>
+                    <div class="feature-text">
+                        <h3>PAGOS SEGUROS CON WEBPAY</h3>
+                        <p>Integración directa con Transbank. Los retiros y depósitos actualizan el saldo en tiempo real mediante transacciones ACID protegidas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="reveal" style="text-align:center;margin-bottom:0;">
+            <div class="section-label" style="justify-content:center;display:flex;">Factibilidad del Proyecto</div>
+            <h2 class="section-title" style="text-align:center;">NUESTRA <span class="accent">PROPUESTA</span></h2>
+            <p class="section-subtitle" style="margin:0 auto;text-align:center;">BlackJack ataca directamente el problema de latencia y cumplimiento legal que sufren los operadores extranjeros en Chile.</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">🛡️</div>
+                <div class="why-title">FACTIBILIDAD LEGAL</div>
+                <p class="why-desc">El proyecto cumple con la Ley N° 21.562 integrando módulos de verificación (KYC) y sistemas de juego responsable regulados.</p>
+            </div>
+            <div class="why-card reveal reveal-delay-1">
+                <div class="why-icon">⚡</div>
+                <div class="why-title">FACTIBILIDAD TÉCNICA</div>
+                <p class="why-desc">Arquitectura basada en Spring Boot, Docker y Kafka, escalable para soportar grandes picos de usuarios concurrentes.</p>
+            </div>
+            <div class="why-card reveal reveal-delay-2">
+                <div class="why-icon">🎲</div>
+                <div class="why-title">FACTIBILIDAD COMERCIAL</div>
+                <p class="why-desc">Ofrecemos baja latencia en mercados locales, resolviendo el principal problema competitivo frente a plataformas extranjeras.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-banner reveal">
+            <h2>¿LISTO PARA <span style="color:var(--purple-light);">EMPEZAR</span>?</h2>
+            <p>Únete a la plataforma tecnológica más avanzada de Chile. Regístrate gratis y experimenta la diferencia de una arquitectura de microservicios en tiempo real.</p>
+            <div class="cta-btns">
+                <button class="btn-primary" onclick="showModal('register')">
+                    🎁 Crear cuenta segura
+                </button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="logo" style="font-size:1.7rem;">
+                <span class="logo-icon">♠</span>
+                Black<span>Jack</span>
+            </a>
+            <p>Proyecto académico V.1 — Desarrollado con Spring Boot, Kafka y React. Arquitectura de microservicios auditada para alto rendimiento.</p>
+            <div style="margin-top:1.25rem;display:flex;gap:8px;flex-wrap:wrap;">
+                <div class="age-badge">🔞 +18</div>
+                <div class="age-badge" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.25);color:var(--purple-light);">SCJ Ley N° 21.562</div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Plataforma</h4>
+            <ul>
+                <li><a href="nosotros.html">Misión y Visión</a></li>
+                <li><a href="#">Módulos del Sistema</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Equipo Fullstack III</h4>
+            <ul>
+                <li><a href="#">Javier Candia</a></li>
+                <li><a href="#">Adrian Diaz</a></li>
+                <li><a href="#">Profesor: Guillermo Villacura</a></li>
+            </ul>
+        </div>
     </div>
+
+    <div class="footer-bottom">
+        <p class="footer-legal">© 2026 BlackJack V.1 · DuocUC Santiago · Todos los derechos reservados</p>
+        <p class="footer-legal" style="color:var(--text-faint);max-width:400px;text-align:right;font-size:0.72rem;">
+            El juego puede causar dependencia. Modere sus apuestas.
+        </p>
+    </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" id="modal-content"></div>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
